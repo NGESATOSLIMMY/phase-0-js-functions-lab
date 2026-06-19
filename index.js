@@ -1,35 +1,35 @@
-// function to calculate 10% tax on a given amount
-function calculateTax(amount, taxrate) {
-  return amount * taxrate;
+function calculateTax(amount){
+    return amount * 0.1; // 10% tax rate
+} 
+
+// Function 2: convertToUpperCase
+function convertToUpperCase(text) {
+    return text.toUpperCase();
 }
 
-//convert a string to uppercase
-function convertToUppercase(str) {
-  return str.toUpperCase();
+// findMaximum
+function findMaximum(num1, num2){
+    return Math.max(num1, num2);
 }
 
-// function to find the maximum number in an array
-function findMaximum(num1, num2) {
-  return Math.max(num1, num2);
+// isPalindrome
+function isPalindrome(word){
+    let reversedWord = word.split("").reverse("").join("")
+    return word === reversedWord;
 }
 
-// function to check if a string is a palindrome
-function isPalindrome(word) {
-  const reversed = word.split("").reverse().join("");
-  return (word, toLowerCase() === reversed.toLowerCase());
-}
+// console.log(isPalindrome("master"));
 
-// function to calculate discounted price
-function calculateDiscountedPrice(originalPrice, discountPercentage) {
-  const discountAmount = originalPrice * (discountPercentage / 100);
-  return originalPrice - dicountAmount;
+function calculateDiscountedPrice(originalPrice, discountPercentage){
+    let discountAmount = (originalPrice * discountPercentage) / 100;
+    return originalPrice - discountAmount;
 }
+// console.log(convertToUpperCase("hi")); // Output: 80
 
-// This is required for the test to function properly
 module.exports = {
-  calculateTax,
-  convertToUppercase,
-  findMaximum,
-  isPalindrome,
-  calculateDiscountedPrice,
-};
+    calculateTax,
+    convertToUpperCase,
+    findMaximum,
+    isPalindrome,
+    calculateDiscountedPrice
+}
